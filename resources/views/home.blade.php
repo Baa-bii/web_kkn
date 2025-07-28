@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Home</title>
 </head>
 <style>
@@ -20,16 +21,22 @@
     <x-header></x-header>
 
     {{-- Start --}}
-    <section id="Home" class="relative min-h-screen pb-36 pt-36 bg-cover bg-center" style="background-image: url('assets/bg1.jpg');">
+    <section id="Home" class="relative min-h-screen pb-36 pt-36 bg-cover bg-center" style="background-image: url('assets/tlaga.jpg');">
         <!-- Set the opacity directly in the gradient colors using rgba or hex with alpha -->
         <div class="absolute inset-0 bg-gradient-to-b" style="background: linear-gradient(to bottom,rgba(35, 208, 231, 0.4), rgba(87, 88, 87, 0.4));"></div>
         <div class="flex items-center justify-center h-full my-[10rem] relative z-10">
             <div class="container mx-auto lg:px-8">
-                <div class="mt-10 w-full flex items-center justify-center lg:pl-8">
+                <div class="mt-5 w-full flex items-center justify-center lg:pl-8">
                     <div class="text-center lg:text-left">
                         <h1 class="text-4xl text-center font-bold text-white md:text-5xl lg:text-6xl">ABOUT</h1>
                         <h1 class="text-4xl text-center font-bold text-white md:text-5xl lg:text-6xl">DESA PRANTEN</h1>
-                        <h2 class="mt-10 text-l text-center font-bold text-white md:text-xl lg:text-xl">"Never forget the important dates of your loved ones again. Create meaningful and surprising online greeting cards with just a few clicks!"</h2>
+                        <h2 class="mt-10 text-l text-center font-bold text-white md:text-xl lg:text-xl">
+                            Desa Pranten terletak di Kecamatan Bawang, Kabupaten Batang, Jawa Tengah, pada
+                            koordinat 7°10′32″ Lintang Selatan dan 109°54′7″ Bujur Timur. Desa ini berada di
+                            perbatasan dengan Kabupaten Wonosobo dan termasuk dalam kawasan dataran tinggi
+                            pegunungan. Secara administratif, Pranten merupakan desa paling ujung selatan
+                            Kabupaten Batang.
+                        </h2>
                     </div>
                 </div>   
             </div>
@@ -37,28 +44,134 @@
     </section>
     
 
-    <section id="OurProduct" class="pt-20 pb-10 px-4 lg:px-8">
-        <div class="container mx-auto">
-            <div class="flex flex-wrap">
-                <div class="mb-10">
-                    <h1 class="text-4xl font-bold bg-gradient-to-r from-[#127a3d] to-[#64f1da] text-transparent bg-clip-text">Our Product</h1>
+    <section id="ObjekWisata" class="pt-20 pb-20  px-4 lg:px-8">
+        <div class="mb-10 ml-7">
+            <h1 class="text-4xl font-bold text-green-400 bg-clip-text" style="-webkit-background-clip: text;">
+                Objek Wisata
+            </h1>
+        </div>
+
+        <div class="container mx-auto px-4">
+            <div class="relative w-full mt-6 rounded-2xl overflow-hidden shadow-lg group" id="carousel">
+                
+                <!-- Carousel inner -->
+                <div class="carousel-inner relative w-full h-96">
+                <div class="carousel-item absolute inset-0 opacity-100 transition-opacity duration-1000">
+                    <img src="/assets/tlaga.jpg" class="w-full h-full object-cover" alt="Slide 1">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                    <div class="text-center text-white px-4">
+                        <h2 class="text-3xl md:text-4xl font-bold">Telaga Mendongan</h2>
+                    </div>
+                    </div>
                 </div>
 
-                <!-- Carousel -->
+                <!-- Slide 2 -->
+                <div class="carousel-item absolute inset-0 opacity-0 transition-opacity duration-1000">
+                    <img src="/assets/logo.png" class="w-full h-full object-cover" alt="Slide 2">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                    <div class="text-center text-white px-4">
+                        <h2 class="text-3xl md:text-4xl font-bold">Logo Desa</h2>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item absolute inset-0 opacity-0 transition-opacity duration-1000">
+                    <img src="/assets/bg1.jpg" class="w-full h-full object-cover" alt="Slide 3">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                    <div class="text-center text-white px-4">
+                        <h2 class="text-3xl md:text-4xl font-bold">Latar Belakang</h2>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Navigasi -->
+                <button id="prevSlide" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 text-gray-800 hover:bg-opacity-90 rounded-full p-2 shadow-md transition duration-300 group-hover:opacity-100 opacity-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+                </button>
+                <button id="nextSlide" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 text-gray-800 hover:bg-opacity-90 rounded-full p-2 shadow-md transition duration-300 group-hover:opacity-100 opacity-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+                </button>
+
+            </div>
+            </div>
+
+        <script>
+                const items = document.querySelectorAll('#carousel .carousel-item');
+                const total = items.length;
+                let index = 0;
+                let interval = setInterval(showNextSlide, 5000); // otomatis setiap 5 detik
+
+                function showSlide(idx) {
+                    items.forEach((item, i) => {
+                        item.style.opacity = (i === idx) ? '1' : '0';
+                    });
+                }
+
+                function showNextSlide() {
+                    index = (index + 1) % total;
+                    showSlide(index);
+                }
+
+                function showPrevSlide() {
+                    index = (index - 1 + total) % total;
+                    showSlide(index);
+                }
+
+                document.getElementById('nextSlide').addEventListener('click', () => {
+                    showNextSlide();
+                    resetInterval();
+                });
+
+                document.getElementById('prevSlide').addEventListener('click', () => {
+                    showPrevSlide();
+                    resetInterval();
+                });
+
+                function resetInterval() {
+                    clearInterval(interval);
+                    interval = setInterval(showNextSlide, 5000);
+                }
+
+                // Inisialisasi
+                showSlide(index);
+            </script>
+
+
+            {{-- <div class="flex flex-wrap">
                 <div id="indicators-carousel" class="relative w-full" data-carousel="slide">
-                    <!-- Wrapper -->
+                    <!-- Carousel wrapper -->
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-[32rem]">
                         <!-- Slide 1 -->
                         <div class="duration-700 ease-in-out" data-carousel-item="active">
-                            <img src="/assets/bg1.jpg" class="absolute block w-full h-full object-cover" alt="Slide 1">
+                            <div class="relative w-full h-full">
+                                <img src="/assets/tlaga.jpg" class="block w-full h-full object-cover" alt="Slide 1">
+                                <div class="absolute inset-0 bg-black/40"></div>
+                                <p class="absolute bottom-5 left-5 text-white text-xl font-semibold z-10">Telogo Mendongan</p>
+                            </div>
                         </div>
+
                         <!-- Slide 2 -->
-                        <div class="duration-700 ease-in-out" data-carousel-item>
-                            <img src="/assets/logo.png" class="absolute block w-full h-full object-cover" alt="Slide 2">
+                        <div class="duration-700 ease-in-out" data-carousel-item="active">
+                            <div class="relative w-full h-full">
+                                <img src="/assets/logo.png" class="block w-full h-full object-cover" alt="Slide 2">
+                                <div class="absolute inset-0 bg-black/40"></div>
+                                <p class="absolute bottom-5 left-5 text-white text-xl font-semibold z-10">Logo Desa</p>
+                            </div>
                         </div>
+
                         <!-- Slide 3 -->
-                        <div class="duration-700 ease-in-out" data-carousel-item>
-                            <img src="/assets/bg1.jpg" class="absolute block w-full h-full object-cover" alt="Slide 3">
+                        <div class="duration-700 ease-in-out" data-carousel-item="active">
+                            <div class="relative w-full h-full">
+                                <img src="/assets/bg1.jpg" class="block w-full h-full object-cover" alt="Slide 3">
+                                <div class="absolute inset-0 bg-black/40"></div>
+                                <p class="absolute bottom-5 left-5 text-white text-xl font-semibold z-10">Pemandangan Desa</p>
+                            </div>
                         </div>
                     </div>
 
@@ -86,12 +199,12 @@
                             <span class="sr-only">Next</span>
                         </span>
                     </button>
-                </div>
-            </div>
+                </div>  
+            </div> --}}
         </div>
     </section>
 
-    <section id="WhatWeProvide" class="pt-20">
+    <section id="WhatWeProvide" class="pt-10 bg-green-400">
         {{-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L48,218.7C96,181,192,107,288,80C384,53,480,75,576,112C672,149,768,203,864,224C960,245,1056,235,1152,192C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> --}}
         <div class="w-full h-full bg-gradient-to-b from-[#127a3d] to-[#64f1da] pb-10">
             <div class="container mx-auto pt-16 px-4 lg:px-8">
